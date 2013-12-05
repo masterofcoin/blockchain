@@ -60,7 +60,7 @@ class BlockChain
     public static function CreateAddress($wallet_id, $main_password, $label, $second_password = "")
     {
         $instance = new Address($wallet_id, $main_password);
-        return $instance->createAddress($second_password, $label);
+        return $instance->createAddress($label, $second_password);
     }
 
     /**
