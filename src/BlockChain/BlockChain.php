@@ -139,7 +139,7 @@ class BlockChain
      * @param string $second_password Your second My Wallet password if double encryption is enabled
      * @return string
      */
-    public static function Pay($wallet_id, $main_password, $from, $to, $amount, $shared = false, $fee, $note, $second_password = "")
+    public static function Pay($wallet_id, $main_password, $from, $to, $amount, $note = '', $fee = '', $shared = false, $second_password = "")
     {
         $instance = new Payments($wallet_id, $main_password);
         return $instance->send($from, $to, $amount, $shared, $fee, $note, $second_password);
